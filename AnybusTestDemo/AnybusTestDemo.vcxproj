@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.c" />
+    <ClCompile Include="src\ABCC\abcc_cbf.c" />
+    <ClCompile Include="src\APDR\apdr.c" />
+    <ClCompile Include="src\APDR\apdr_par.c" />
+    <ClCompile Include="src\APDR\apdr_ser.c" />
+    <ClCompile Include="src\APLINK\aplink.c" />
+    <ClCompile Include="src\CRC\crc.c" />
+    <ClCompile Include="src\SYS\sys_adpt.c" />
+    <ClCompile Include="src\UTIL\util.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ABCC\INCLUDE\abcc.h" />
+    <ClInclude Include="src\ABCC\INCLUDE\abcc_com.h" />
+    <ClInclude Include="src\ABCC\INCLUDE\abcc_td.h" />
+    <ClInclude Include="src\ABCC\INCLUDE\abp.h" />
+    <ClInclude Include="src\APDR\INCLUDE\apdr.h" />
+    <ClInclude Include="src\APDR\INCLUDE\apdr_priv.h" />
+    <ClInclude Include="src\APLINK\INCLUDE\aplink.h" />
+    <ClInclude Include="src\APLINK\INCLUDE\aplink_priv.h" />
+    <ClInclude Include="src\CRC\INCLUDE\crc.h" />
+    <ClInclude Include="src\SYS\INCLUDE\sys_adpt.h" />
+    <ClInclude Include="src\UTIL\INCLUDE\util.h" />
+    <ClInclude Include="src\UTIL\INCLUDE\util_priv.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F0FFF549-5883-47B9-9106-C8EEF0D0499E}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>AnybusTestDemo</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\shiww\Documents\Visual Studio 2013\Projects\AnybusTestDemo\AnybusTestDemo\src\UTIL\INCLUDE;C:\Users\shiww\Documents\Visual Studio 2013\Projects\AnybusTestDemo\AnybusTestDemo\src\SYS\INCLUDE;C:\Users\shiww\Documents\Visual Studio 2013\Projects\AnybusTestDemo\AnybusTestDemo\src\CRC\INCLUDE;C:\Users\shiww\Documents\Visual Studio 2013\Projects\AnybusTestDemo\AnybusTestDemo\src\APLINK\INCLUDE;C:\Users\shiww\Documents\Visual Studio 2013\Projects\AnybusTestDemo\AnybusTestDemo\src\APDR\INCLUDE;C:\Users\shiww\Documents\Visual Studio 2013\Projects\AnybusTestDemo\AnybusTestDemo\src\ABCC\INCLUDE;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
