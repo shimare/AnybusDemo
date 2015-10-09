@@ -5,5 +5,6 @@
 
 int main(void)
 {
+	printf("this is an anybus demo!\n");
 	return 0;
 }
